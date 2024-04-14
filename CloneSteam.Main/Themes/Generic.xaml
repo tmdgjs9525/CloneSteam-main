@@ -1,0 +1,17 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/TopMenu.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/TopMenuItem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/MainContentMenuListBox.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/MainContentMenuItem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/CustomPopup.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/PopupItem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Main;component/Themes/Units/PageNaviButtonBase.xaml" />
+
+
+    </ResourceDictionary.MergedDictionaries>
+
+
+
+</ResourceDictionary>
+

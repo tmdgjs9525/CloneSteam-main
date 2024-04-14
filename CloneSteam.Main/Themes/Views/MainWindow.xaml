@@ -1,0 +1,29 @@
+﻿<Window
+    x:Class="CloneSteam.Main.Themes.Views.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    x:Name="root"
+    MinWidth="{Binding MinWidth}"
+    MinHeight="{Binding MinHeight}"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="Transparent"
+    BorderThickness="1"
+    ResizeMode="{Binding ResizeMode}"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="0"
+            CornerRadius="0"
+            GlassFrameThickness="0"
+            NonClientFrameEdges="None"
+            ResizeBorderThickness="5"
+            UseAeroCaptionButtons="False" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="MainWindowRegion" />
+    </Grid>
+</Window>

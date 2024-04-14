@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CloneSteam.Core\CloneSteam.Core.csproj" />
+    <ProjectReference Include="..\CloneSteam.Login\CloneSteam.Login.csproj" />
+    <ProjectReference Include="..\CloneSteam.Main\CloneSteam.Main.csproj" />
+  </ItemGroup>
+
+</Project>

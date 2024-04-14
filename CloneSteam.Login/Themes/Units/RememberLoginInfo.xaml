@@ -1,0 +1,41 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:Icon="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+    xmlns:units="clr-namespace:CloneSteam.Login.UI.Units">
+    <Style TargetType="{x:Type units:RememberLoginInfo}">
+        <Setter Property="Background" Value="#32353c" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Width" Value="120" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:RememberLoginInfo}">
+                    <Border CornerRadius="2">
+                        <StackPanel Orientation="Vertical">
+                            <StackPanel Orientation="Horizontal">
+                                <units:CustomCheckBox />
+                                <Label
+                                    Content="로그인 정보 저장"
+                                    Cursor="Hand"
+                                    Foreground="#afafaf" />
+                                <ContentPresenter />
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#393c44" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ToolTip">
+            <Setter.Value>
+                <units:CustomToolTip/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

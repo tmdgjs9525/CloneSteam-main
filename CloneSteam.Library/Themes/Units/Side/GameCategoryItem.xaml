@@ -1,0 +1,60 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvtrs="clr-namespace:CloneSteam.Core.Converters;assembly=CloneSteam.Core"
+    xmlns:units="clr-namespace:CloneSteam.Library.UI.Units.Side">
+
+    <Style TargetType="{x:Type units:GameCategoryItem}">
+        <Setter Property="Foreground" Value="#cae4fb" />
+
+        <Setter Property="ItemsSource" Value="{Binding Children}" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0.5" EndPoint="0.9,0.5">
+                    <GradientStop Offset="-0.5" Color="#292f3b" />
+                    <GradientStop Offset="0" Color="#292f3a" />
+                    <GradientStop Offset="1" Color="#262b32" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:GameCategoryItem}">
+                    <StackPanel Orientation="Vertical">
+                        <Border x:Name="border" Background="{TemplateBinding Background}">
+                            <StackPanel Margin="6,0,0,0" Orientation="Horizontal">
+                                <units:GameCategoryToggle x:Name="togglebtn" />
+                                <TextBlock
+                                    Margin="3,0,0,0"
+                                    VerticalAlignment="Center"
+                                    FontWeight="Regular"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    Text="{Binding Name}" />
+                                <TextBlock
+                                    Margin="5,0,0,0"
+                                    VerticalAlignment="Center"
+                                    FontWeight="Bold"
+                                    Foreground="#515660"
+                                    Text="{Binding Children.Count, Converter={cnvtrs:GameCountConverter}}" />
+
+                            </StackPanel>
+                        </Border>
+                        <ItemsPresenter Visibility="{Binding IsExpanded, RelativeSource={RelativeSource TemplatedParent}, Converter={cnvtrs:BooleanToVisibleConverter}}" />
+                    </StackPanel>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="border" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#3e4e69" />
+                        </Trigger>
+                        <Trigger SourceName="togglebtn" Property="IsChecked" Value="True">
+                            <Setter Property="IsExpanded" Value="True" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

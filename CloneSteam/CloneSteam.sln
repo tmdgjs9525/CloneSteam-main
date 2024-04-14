@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam", "CloneSteam.csproj", "{24986484-5FF3-4022-B783-8EA07386B2BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam.Core", "..\CloneSteam.Core\CloneSteam.Core.csproj", "{761E1AA9-1F7A-4625-B10E-E6B4745D64EE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam.Login", "..\CloneSteam.Login\CloneSteam.Login.csproj", "{8FC33656-CFE4-4E57-8EF0-65B0CEE84A2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam.Main", "..\CloneSteam.Main\CloneSteam.Main.csproj", "{787F220A-7D93-4D72-A465-1C66877A6E79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam.Library", "..\CloneSteam.Library\CloneSteam.Library.csproj", "{2F0D27B0-6689-4801-963B-A83923A36135}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CloneSteam.Support", "..\CloneSteam.Support\CloneSteam.Support.csproj", "{7D3DFD0E-6907-427A-845D-E46DA5FFB553}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24986484-5FF3-4022-B783-8EA07386B2BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24986484-5FF3-4022-B783-8EA07386B2BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24986484-5FF3-4022-B783-8EA07386B2BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24986484-5FF3-4022-B783-8EA07386B2BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{761E1AA9-1F7A-4625-B10E-E6B4745D64EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761E1AA9-1F7A-4625-B10E-E6B4745D64EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761E1AA9-1F7A-4625-B10E-E6B4745D64EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761E1AA9-1F7A-4625-B10E-E6B4745D64EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FC33656-CFE4-4E57-8EF0-65B0CEE84A2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FC33656-CFE4-4E57-8EF0-65B0CEE84A2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FC33656-CFE4-4E57-8EF0-65B0CEE84A2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FC33656-CFE4-4E57-8EF0-65B0CEE84A2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{787F220A-7D93-4D72-A465-1C66877A6E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{787F220A-7D93-4D72-A465-1C66877A6E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{787F220A-7D93-4D72-A465-1C66877A6E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{787F220A-7D93-4D72-A465-1C66877A6E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F0D27B0-6689-4801-963B-A83923A36135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F0D27B0-6689-4801-963B-A83923A36135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F0D27B0-6689-4801-963B-A83923A36135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F0D27B0-6689-4801-963B-A83923A36135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D3DFD0E-6907-427A-845D-E46DA5FFB553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D3DFD0E-6907-427A-845D-E46DA5FFB553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D3DFD0E-6907-427A-845D-E46DA5FFB553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D3DFD0E-6907-427A-845D-E46DA5FFB553}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {611D7BF8-4388-4C84-96FB-65228DFA18BA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,30 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Views/LibraryWindow.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GroupComboBox.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GroupComboBoxItem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/LibraryHomeToggleButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/CategoryListToggleButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/ShowPlayLastlyToggleButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/ShowInstalledGameToogleButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/SearchGameTextBox.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GameCategoryTreeView.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GameCategoryItem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GameCategoryToggle.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GameInfoTreeView.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Side/GameInfoItem.xaml" />
+
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Views/GameInfoDetail.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayTimeText.xaml" />
+
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--<Style TargetType="{x:Type Control}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+    </Style>-->
+
+
+
+
+</ResourceDictionary>
