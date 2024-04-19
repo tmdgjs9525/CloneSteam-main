@@ -18,7 +18,12 @@
                                 VerticalAlignment="Center"
                                 Foreground="{TemplateBinding Foreground}"
                                 Text="홈" />
-                            <icon:MaterialIcon Kind="Steam" Foreground="DimGray" Width="200" Height="200" VerticalAlignment="Center"/>
+                            <icon:MaterialIcon
+                                Width="200"
+                                Height="200"
+                                VerticalAlignment="Center"
+                                Foreground="DimGray"
+                                Kind="Steam" />
                         </Grid>
 
                     </Border>
@@ -34,6 +39,7 @@
                                             Duration="0:0:0.1" />
                                     </Storyboard>
                                 </BeginStoryboard>
+                             
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>

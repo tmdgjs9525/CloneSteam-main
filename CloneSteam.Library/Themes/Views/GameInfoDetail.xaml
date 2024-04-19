@@ -31,13 +31,13 @@
                             </Border.Background>
                         </Border>
 
-                        <Border Grid.Row="1" Opacity="0.8">
+                        <Border Grid.Row="1" Opacity="0.8" Grid.RowSpan="2">
                             <Border.Background>
                                 <VisualBrush>
                                     <VisualBrush.Visual>
                                         <Image Source="{Binding BackgroundImage}">
                                             <Image.Clip>
-                                                <RectangleGeometry Rect="0,280,1920,380" />
+                                                <RectangleGeometry Rect="0,280,1920,1080" />
                                             </Image.Clip>
                                             <Image.BitmapEffect>
                                                 <BlurBitmapEffect KernelType="Gaussian" Radius="50" />
@@ -48,25 +48,7 @@
                             </Border.Background>
                         </Border>
 
-                        <Border
-                            Grid.Row="2"
-                            BorderThickness="0"
-                            Opacity="0.8">
-                            <Border.Background>
-                                <VisualBrush>
-                                    <VisualBrush.Visual>
-                                        <Image Source="{Binding BackgroundImage}">
-                                            <Image.Clip>
-                                                <RectangleGeometry Rect="0,600,1920,1080" />
-                                            </Image.Clip>
-                                            <Image.BitmapEffect>
-                                                <BlurBitmapEffect KernelType="Gaussian" Radius="50" />
-                                            </Image.BitmapEffect>
-                                        </Image>
-                                    </VisualBrush.Visual>
-                                </VisualBrush>
-                            </Border.Background>
-                        </Border>
+                     
 
 
                         <StackPanel

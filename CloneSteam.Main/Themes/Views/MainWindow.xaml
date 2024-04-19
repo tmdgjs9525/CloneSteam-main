@@ -23,6 +23,8 @@
             ResizeBorderThickness="5"
             UseAeroCaptionButtons="False" />
     </WindowChrome.WindowChrome>
+
+
     <Grid>
         <ContentControl prism:RegionManager.RegionName="MainWindowRegion" />
     </Grid>

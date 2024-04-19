@@ -23,6 +23,8 @@ namespace CloneSteam.Main.Themes.Views
         public MainContent()
         {
             InitializeComponent();
+
+
         }
     }
 }
