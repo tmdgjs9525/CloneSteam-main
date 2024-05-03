@@ -63,11 +63,11 @@
                             </Grid>
 
                             <support:CustomScrollViewer Grid.Row="3" Margin="0,8,0,0">
-                                <units:GameCategoryTreeView ItemsSource="{Binding GameInfos}" SelectionCommand="{Binding GameChangedCommand}" />
+                                <units:GameCategoryTreeView ItemsSource="{Binding Games}" SelectionCommand="{Binding GameChangedCommand}" />
                             </support:CustomScrollViewer>
 
                             <support:CustomScrollViewer Grid.RowSpan="4" Grid.Column="1">
-                                <views:GameInfoDetail DataContext="{Binding CurrentGameInfo}" />
+                                <views:GameInfoDetail DataContext="{Binding SelectedGame}" />
                             </support:CustomScrollViewer>
 
 

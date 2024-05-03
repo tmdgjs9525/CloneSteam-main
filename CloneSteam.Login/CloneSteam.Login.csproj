@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CloneSteam.Core\CloneSteam.Core.csproj" />
+    <ProjectReference Include="..\CloneSteam.Support\CloneSteam.Support.csproj" />
   </ItemGroup>
 
 </Project>

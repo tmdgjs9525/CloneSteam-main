@@ -13,13 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CloneSteam.Login.UI.Units
+namespace CloneSteam.Library.UI.Units.Detail.TopButtons
 {
-    public class TextBoxBase : TextBox
+   
+    public class SettingButton : Button
     {
-        static TextBoxBase()
+        static SettingButton()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TextBoxBase), new FrameworkPropertyMetadata(typeof(TextBoxBase)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(SettingButton), new FrameworkPropertyMetadata(typeof(SettingButton)));
         }
     }
 }

@@ -16,20 +16,20 @@ namespace CloneSteam.Library.Local.ViewModels
     public partial class LibraryWindowViewModel : ObservableObject
     {
         [ObservableProperty]
-        List<LibraryCategory> gameInfos = new List<LibraryCategory>();
+        List<LibraryCategory> games = new List<LibraryCategory>();
 
         [ObservableProperty]
-        private GameInfo currentGameInfo;
+        private GameInfoDetail selectedGame = new();
 
         public LibraryWindowViewModel(GameInfoService gameInfoService)
         {
-            GameInfos = gameInfoService.GenerateCategoryNodes();
+            Games = gameInfoService.GenerateCategoryNodes();
         }
 
         [RelayCommand]
         private void GameChanged(GameInfo gameInfo)
         {
-            CurrentGameInfo = gameInfo;
+            SelectedGame.CurrentGameInfo = gameInfo;
         }
     }
 }

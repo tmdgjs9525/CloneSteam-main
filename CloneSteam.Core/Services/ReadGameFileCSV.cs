@@ -13,10 +13,10 @@ namespace CloneSteam.Core.Services
     {
         public static string[]? GetFiles()
         {
-            string directoryPath = @"C:\Users\tmdgj\Desktop\GetSteamApps\bin";
+            string directoryPath = Directory.GetParent(Environment.CurrentDirectory).Parent.FullName.Replace(@"\bin", @"\CSV");
 
 
-                // 지정된 경로의 모든 파일 가져오기
+            // 지정된 경로의 모든 파일 가져오기
             string[] files = Directory.GetFiles(directoryPath);
 
             if (files.Length > 0)

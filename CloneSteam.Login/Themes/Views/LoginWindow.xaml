@@ -66,7 +66,7 @@
                                     Margin="-5,0,0,0"
                                     Content="계정 이름으로 로그인"
                                     Foreground="#1997ff" />
-                                <units:TextBoxBase />
+                                <units:IDTextBox />
                                 <Label
                                     Margin="-5,0,0,0"
                                     Content="비밀번호"

@@ -15,12 +15,11 @@ using System.Windows.Shapes;
 
 namespace CloneSteam.Login.UI.Units
 {
-    
-    public class CustomToolTip : ToolTip
+    public class IDTextBox : TextBox
     {
-        static CustomToolTip()
+        static IDTextBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomToolTip), new FrameworkPropertyMetadata(typeof(CustomToolTip)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(IDTextBox), new FrameworkPropertyMetadata(typeof(IDTextBox)));
         }
     }
 }

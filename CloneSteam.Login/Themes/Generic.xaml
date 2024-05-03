@@ -2,13 +2,12 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Views/LoginWindow.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/CloseButton.xaml" />
-        <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/TextBoxBase.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/IDTextBox.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/CustomCheckBox.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/LoginButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/LoginProblemButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/SignUpButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/RememberLoginInfo.xaml" />
-        <ResourceDictionary Source="/CloneSteam.Login;component/Themes/Units/CustomToolTip.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
 
