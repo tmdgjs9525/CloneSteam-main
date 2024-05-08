@@ -17,11 +17,23 @@
 
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Views/GameInfoDetail.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/InstallButton.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/NaviButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayTimeText.xaml" />
 
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopButtons/SettingButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopButtons/MoreInfoToogleButton.xaml" />
         <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/TopButtons/FavoriteToogleButton.xaml" />
+
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/News/Date.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/News/News.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/News/NewsListBox.xaml" />
+
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayedFriends/PlayedRecentlyListBoxitem.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayedFriends/PlayedRecentlyListBox.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Library;component/Themes/Units/Detail/PlayedFriends/PlayedRecentlyList.xaml" />
+
+
 
 
     </ResourceDictionary.MergedDictionaries>

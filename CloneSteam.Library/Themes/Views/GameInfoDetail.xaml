@@ -1,7 +1,10 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvtrs="clr-namespace:CloneSteam.Core.Converters;assembly=CloneSteam.Core"
     xmlns:dunits="clr-namespace:CloneSteam.Library.UI.Units.Detail"
+    xmlns:news="clr-namespace:CloneSteam.Library.UI.Units.Detail.News"
+    xmlns:played="clr-namespace:CloneSteam.Library.UI.Units.Detail.PlayedFriends"
     xmlns:tb="clr-namespace:CloneSteam.Library.UI.Units.Detail.TopButtons"
     xmlns:views="clr-namespace:CloneSteam.Library.UI.Views">
 
@@ -12,12 +15,16 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="280" />
-                            <RowDefinition Height="100" />
-                            <RowDefinition Height="700" />
+                            <RowDefinition Height="60" />
+                            <RowDefinition Height="50" />
+                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.7*" />
+                            <ColumnDefinition Width="0.4*" />
+                        </Grid.ColumnDefinitions>
                         <!--  border 백그라운드 이미지 세팅  -->
-                        <Border>
+                        <Border Grid.ColumnSpan="2">
                             <Border.Background>
                                 <VisualBrush>
                                     <VisualBrush.Visual>
@@ -33,7 +40,8 @@
 
                         <Border
                             Grid.Row="1"
-                            Grid.RowSpan="2"
+                            Grid.RowSpan="3"
+                            Grid.ColumnSpan="2"
                             Opacity="0.8">
                             <Border.Background>
                                 <VisualBrush>
@@ -51,18 +59,22 @@
                             </Border.Background>
                         </Border>
 
-
-
-
                         <DockPanel
                             Grid.Row="1"
+                            Grid.ColumnSpan="2"
                             Margin="20,10,0,0"
                             VerticalAlignment="Top"
                             LastChildFill="False">
                             <dunits:PlayButton
                                 Width="115"
                                 Height="33"
-                                DockPanel.Dock="Left" />
+                                DockPanel.Dock="Left"
+                                Visibility="{Binding CurrentGameInfo.IsInstalled, Converter={cnvtrs:BooleanToVisibleConverter}}" />
+                            <dunits:InstallButton
+                                Width="115"
+                                Height="33"
+                                DockPanel.Dock="Left"
+                                Visibility="{Binding CurrentGameInfo.IsInstalled, Converter={cnvtrs:InverseBooleanToVisibleConverter}}" />
                             <dunits:PlayTimeText
                                 Margin="20,0,0,0"
                                 ChildText="5일 전"
@@ -84,8 +96,43 @@
                                 <tb:MoreInfoToogleButton Margin="10,0,0,0" />
                                 <tb:FavoriteToogleButton Margin="10,0,0,0" />
                             </StackPanel>
-
                         </DockPanel>
+
+                        <StackPanel
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            Margin="20,0,20,0"
+                            VerticalAlignment="Top"
+                            Orientation="Vertical">
+                            <Grid Height="40">
+                                <Border
+                                    Background="#282d34"
+                                    CornerRadius="2"
+                                    Opacity="0.7" />
+                                <StackPanel Orientation="Horizontal">
+                                    <dunits:NaviButton Margin="10,0,0,0" Content="상점 페이지" />
+                                    <dunits:NaviButton Margin="30,0,0,0" Content="커뮤니티 허브" />
+                                    <dunits:NaviButton Margin="30,0,0,0" Content="토론" />
+                                    <dunits:NaviButton Margin="30,0,0,0" Content="가이드" />
+                                    <dunits:NaviButton Margin="30,0,0,0" Content="지원" />
+                                </StackPanel>
+
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Margin="20,0,0,20"
+                            HorizontalAlignment="Left"
+                            Orientation="Vertical">
+                            <news:NewsListBox ItemsSource="{Binding CurrentGameInfo.News}" />
+
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" Grid.Row="3" Grid.Column="1" Margin="20,0,0,10">
+                            <played:PlayedRecentlyList/>
+                        </StackPanel>
                     </Grid>
 
 

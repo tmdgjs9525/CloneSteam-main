@@ -1,0 +1,74 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvtrs="clr-namespace:CloneSteam.Core.Converters;assembly=CloneSteam.Core"
+    xmlns:icon="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+    xmlns:units="clr-namespace:CloneSteam.Library.UI.Units.Detail.News">
+
+    <Style x:Key="NewsType" TargetType="TextBlock">
+        <Setter Property="Text" Value="{Binding NewsType, Converter={cnvtrs:NewsTypeEnumConverter}}" />
+        <Setter Property="FontSize" Value="13" />
+        <Style.Triggers>
+            <Trigger Property="Text" Value="주요 업데이트">
+                <Setter Property="Foreground" Value="#289bff" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Title" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="Foreground" Value="#FFFFFF" />
+    </Style>
+
+    <Style x:Key="Description" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="TextWrapping" Value="Wrap" />
+        <Setter Property="Foreground" Value="Gray" />
+    </Style>
+
+    <Style TargetType="{x:Type units:News}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:News}">
+                    <StackPanel Background="{TemplateBinding Background}" Orientation="Vertical">
+                        <units:Date Content="{Binding Date}" />
+                        <Border
+                            x:Name="border"
+                            Margin="5,0,0,0"
+                            BorderBrush="Gray"
+                            BorderThickness="1">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                                    <GradientStop Offset="0.0" Color="#24292e" />
+                                    <GradientStop Offset="0.35" Color="#24292e" />
+                                    <GradientStop Offset="0.55" Color="#24292e38" />
+                                    <GradientStop Offset="0.65" Color="#24292e36" />
+                                    <GradientStop Offset="1" Color="#24292e" />
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <StackPanel Margin="15" Orientation="Vertical">
+                                <Image />
+                                <TextBlock Style="{StaticResource NewsType}" />
+                                <TextBlock
+                                    Margin="0,5,0,0"
+                                    Style="{StaticResource Title}"
+                                    Text="{Binding Title}" />
+                                <TextBlock
+                                    Margin="0,10,0,0"
+                                    Style="{StaticResource Description}"
+                                    Text="{Binding Content}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <!--<ControlTemplate.Triggers>
+                        <Trigger SourceName="border" Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#24292e36"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

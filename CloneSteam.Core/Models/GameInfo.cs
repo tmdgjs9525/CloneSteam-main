@@ -54,6 +54,7 @@ namespace CloneSteam.Core.Models
         public List<string> Screenshots { get; set; }
         public long Length { get; set; }
 
+        public List<News> News { get; set; } = new List<News>();
         public GameInfo(string? type, string? name, int steamAppID, int requiredAge, string? detailedDescription, string? headerImage,bool isInstalled)
         {
             Type = type;
@@ -63,7 +64,12 @@ namespace CloneSteam.Core.Models
             DetailedDescription = detailedDescription;
             HeaderImage = headerImage;
             IsInstalled = isInstalled;
-
+            string tempContent = "Today, we’re bringing you an update with some balance changes and dev comments on future changes to both the Stun Gun and the Cloaking Device!\r\n\r\nThe second Community Challenge has come to an end. Congratulations on reaching the goal! We were never worried (maybe a little worried), enjoy your brand new Boombox — and special shout out to player \"Goo and Sledge\" for pushing the platform an astounding 185km!";
+            DateTime dateTime = DateTime.Now;
+            for (int i = 0; i < 10; i++)
+            {
+                News.Add(new News(NewsType.MAIN_UPDATE, dateTime.AddDays(-i), $"{Name} Update {i}", tempContent, null, 0));
+            }
         }
         public GameInfo(string type, string name, int steamAppID, int requiredAge, bool isFree, string detailedDescription, string aboutTheGame, string shortDescription, string supportedLanguages, string headerImage, string capsuleImage, string capsuleImagev5, string website, string pcMinimumRequirements, string pcMaximumRequirements, string developers, string publishers, string priceCurrency, decimal priceInitial, decimal priceFinal, int priceDiscountPercent, bool windows, bool mac, bool linux, string metacritic, string categories, string genres,bool isInstalled)
         {

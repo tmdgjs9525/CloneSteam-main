@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CloneSteam.Core.Models
 {
-    public class Challenge
+    public class Challenge : GameNewsBase
     {
-
+        public Challenge(DateTime dateOrigin, string title, string content, List<Comment> comment, int like) : base(dateOrigin, title, content, comment, like)
+        {
+        }
     }
 }

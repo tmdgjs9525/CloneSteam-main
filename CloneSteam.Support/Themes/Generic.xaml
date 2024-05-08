@@ -3,6 +3,7 @@
         <ResourceDictionary Source="/CloneSteam.Support;component/Themes/Units/CustomScrollViewer.xaml" />
         <ResourceDictionary Source="/CloneSteam.Support;component/Themes/Units/CustomScrollBar.xaml" />
         <ResourceDictionary Source="/CloneSteam.Support;component/Themes/Units/CustomToolTip.xaml" />
+        <ResourceDictionary Source="/CloneSteam.Support;component/Themes/Units/UserIcon.xaml" />
 
     </ResourceDictionary.MergedDictionaries>
 

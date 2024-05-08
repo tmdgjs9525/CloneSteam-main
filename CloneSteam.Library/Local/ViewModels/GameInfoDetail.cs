@@ -1,8 +1,10 @@
 ﻿using CloneSteam.Core.Models;
+using CloneSteam.Core.Services;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,37 +15,19 @@ namespace CloneSteam.Library.Local.ViewModels
     public partial class GameInfoDetail : ObservableObject
     {
         [ObservableProperty]
-        string? settingToolTiptxt;
-        [ObservableProperty]
-        string? infoToolTiptxt;
-        [ObservableProperty]
-        string? bookmarkToolTiptxt;
-        [ObservableProperty]
         private GameInfo currentGameInfo;
 
+        [ObservableProperty]
+        private List<User> playedRecentlyList;
 
-
-        public GameInfoDetail()
+        private FriendData _friendData;
+        public GameInfoDetail(FriendData friendData)
         {
-            SettingToolTiptxt = getSettingToolTip();
-            InfoToolTiptxt = getInfoToolTip();
-            BookmarkToolTiptxt = getBookmarkToolTip();
+           _friendData = friendData;
+
+            PlayedRecentlyList = _friendData.friends;
         }
 
-
-        private string getSettingToolTip()
-        {
-            return "관리";
-        }
-        private string getInfoToolTip()
-        {
-            return "정보 자세히 보기";
-        }
-
-        private string getBookmarkToolTip()
-        {
-            return "즐겨찾기에 추가";
-        }
         #region Command
         [RelayCommand]
         private void SettingBtn()

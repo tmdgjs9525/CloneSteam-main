@@ -12,4 +12,10 @@
     <ProjectReference Include="..\CloneSteam.Support\CloneSteam.Support.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Themes\Units\Detail\InstallButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

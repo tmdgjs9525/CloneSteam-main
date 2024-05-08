@@ -1,0 +1,36 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvtrs="clr-namespace:CloneSteam.Core.Converters;assembly=CloneSteam.Core"
+    xmlns:icon="clr-namespace:Material.Icons.WPF;assembly=Material.Icons.WPF"
+    xmlns:support="clr-namespace:CloneSteam.Support.UI.Units;assembly=CloneSteam.Support"
+    xmlns:units="clr-namespace:CloneSteam.Library.UI.Units.Detail.PlayedFriends">
+
+    <Style TargetType="{x:Type units:PlayedRecentlyList}">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:PlayedRecentlyList}">
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock
+                            FontSize="14"
+                            Foreground="Gray"
+                            Text="플레이 한 친구들" />
+                        <Border Background="#24292e50"  Margin="0,10,20,0">
+                            <StackPanel Margin="10,10,10,10">
+                                <!--  친구 n명이 최근 플레이했습니다  -->
+                                <TextBlock
+                                    FontSize="13"
+                                    Foreground="White"
+                                    Text="{Binding PlayedRecentlyList.Count, Converter={cnvtrs:PlayedRecentlyTextConverter}}" />
+                                <units:PlayedRecentlyListBox ItemsSource="{Binding PlayedRecentlyList}" />
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>
